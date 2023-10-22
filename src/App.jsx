@@ -18,6 +18,7 @@ function App() {
     <>  
       <h1>PROHAS</h1>
       <NavBar/>
+      
       <ItemListContainer greeting="Bienvenido a Prohas, terrenos con servicios"/>
     </>
 
