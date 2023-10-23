@@ -12,6 +12,8 @@ const ItemListContainer = ({greeting}) => {
     // NOTA: Mostrar nombre y precio
 
    // 1) Crear la Promise
+
+   /* SACO PROMESA
     const promesa = new Promise((resolve, reject) => {
         const productosArray = [
             {name: "Remera", precio: 20000, id: 1},
@@ -24,17 +26,26 @@ const ItemListContainer = ({greeting}) => {
             productosArray.length > 0 ? resolve(productosArray) : reject({data: [], message: "No hay productos"})
         }, 5000)
     })
-
+*/
 
     // 2) Llamar a la promise y guardar su resultado... Acuerdense:
     // QUE ESTAN TRABAJANDO CON REACT. 
     useEffect(() => {
+        /*
         promesa
         .then(res => {
             console.log(res)
             setProducts(res)
         })
         .catch(error => console.error(error.message))
+        */
+
+        fetch('https://fakestoreapi.com/products?limit=9')
+            .then(res=>res.json())
+            .then(json=>{console.log(json)
+                setProducts(json)})
+            .catch(error => console.error(error))
+
     }, [])
 
 

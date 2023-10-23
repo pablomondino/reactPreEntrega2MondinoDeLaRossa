@@ -1,8 +1,8 @@
 const Item = ({producto}) => {
     return(
         <div> 
-            <p>{producto.name}</p>
-            <p>{producto.precio}</p>
+            <p>{producto.title}</p>
+            <p>{producto.price}</p>
         </div>
     )
 }
