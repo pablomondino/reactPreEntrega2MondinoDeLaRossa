@@ -16,10 +16,10 @@ function App() {
     
 
     <>  
-      <h1>PROHAS</h1>
+      <h1>TIENDA LA PIETÁ</h1>
       <NavBar/>
       
-      <ItemListContainer greeting="Bienvenido a Prohas, terrenos con servicios"/>
+      <ItemListContainer greeting="Bienvenido a Tienda La Pietá"/>
     </>
 
   ) 

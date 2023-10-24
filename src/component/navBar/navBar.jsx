@@ -6,7 +6,7 @@ const items = [
     {
         label: (
             <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-                Tipos de lotes disponibles
+                Productos disponibles
             </a>
         ),
         key: '0',
@@ -35,8 +35,7 @@ const items = [
 const NavBar = () => {
     return (
         <div>
-            <p>Prohas - Lotes con servicios
-                para familias trabajadoras</p>
+            <p>La Pietá  - En esta tienda encontrás lo que buscás</p>
 
             <Dropdown
                 menu={{

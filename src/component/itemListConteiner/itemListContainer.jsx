@@ -55,7 +55,7 @@ const ItemListContainer = ({greeting}) => {
             {/* 3) Recorrer el array de productos y mostrar nombre y precio */}
             {products.length > 0 ? (
                 <>
-                {products.map((prod, index) => <Item key={prod.id} producto={prod} />)}
+                {products.map((pr) => <Item key={pr.id} producto={pr} />)}
                 </>
             ) : (
                 <Spin />
