@@ -1,21 +1,22 @@
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
 import CartWitget from '../cartWidget/cartWidget';
+import { Link } from 'react-router-dom';
 
 const items = [
     {
         label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-                Productos disponibles
-            </a>
+            
+                 <Link to={"/bienvenida"}> Ir a Bienvenida</Link>           
         ),
         key: '0',
     },
     {
         label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-                Contacto
-            </a>
+           
+            <Link to={"/"}> Ir a productos</Link>           
+
+           
         ),
         key: '1',
     },
@@ -33,10 +34,18 @@ const items = [
 
 
 const NavBar = () => {
+
+    const arrayDeCategorias=  [
+        "electronics",
+        "jewelery",
+        "men's clothing",
+        "women's clothing"
+        ]
     return (
         <div>
             <p>La Pietá  - En esta tienda encontrás lo que buscás</p>
-
+           {arrayDeCategorias.map((cat,index)=>
+            <p key={index}>{cat}</p>)}
             <Dropdown
                 menu={{
                     items,

@@ -2,6 +2,8 @@ import { Button } from "antd"
 import { useEffect, useRef, useState } from "react"
 import {Spin} from 'antd';
 import Item from "../item/item";
+import { Link } from "react-router-dom";
+
 const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
     // Crear una promise que devuelva un array de productos con el siguiente formato:
@@ -50,7 +52,9 @@ const ItemListContainer = ({greeting}) => {
 
 
     return(
-        <>
+        <div className={StyleSheet.container}>
+
+            
             <h2 className="saludo">{greeting}</h2>
             {/* 3) Recorrer el array de productos y mostrar nombre y precio */}
             {products.length > 0 ? (
@@ -62,7 +66,7 @@ const ItemListContainer = ({greeting}) => {
             )}
             <>
             </>
-        </>
+        </div>
     )
 }
 
